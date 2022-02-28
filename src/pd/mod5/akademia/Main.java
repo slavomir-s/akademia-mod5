@@ -56,7 +56,9 @@ public class Main {
         for(String name:names)
             System.out.println(name +" is a "+getGenderByName(name));
         //zadanie z ZOO
-        zooTest();
+        zooTasks();
+
+        System.out.println("Koniec PD mod 5");
 
 
     }
@@ -92,7 +94,7 @@ public class Main {
         return gender.MAN;
     }
 
-    public static void zooTest(){
+    public static void zooTasks(){
         Zoo zoo = new Zoo("Północne",1990);
 
         //generacja zwierząt:
@@ -119,6 +121,7 @@ public class Main {
                 4);
         Snake snake = new Snake("Joe",2000,160);
 
+        //interfejs Speakable
         List<Speakable> speakableAnimals = new ArrayList();
         speakableAnimals.add(snake);
         speakableAnimals.add(fish);
@@ -154,12 +157,6 @@ public class Main {
         //zapis nazw zwierząt z Zoo do pliku
         convertAnimalsToTxt("animals.txt",zoo);
         convertAnimalsToTxt("badPathTest://animals.txt",zoo);
-
-        System.out.println("Koniec PD mod 5");
-
-
-
-
     }
 
     public static void convertAnimalsToTxt(String filePath,Zoo zoo){
